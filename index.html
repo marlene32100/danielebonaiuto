@@ -12,6 +12,13 @@
     <link rel="pingback" href="https://danielebonaiuto.it" />
     <title>Daniele Bonaiuto</title>
     <!-- style and script resources -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="assets/style/style.css" media="all" />
     <script src=""></script>
     <!--meta properties -->
@@ -92,11 +99,11 @@
       <nav>
         <div>
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li><a href="#landing">Home</a></li>
+            <li><a href="#listen">Ascolta</a></li>
+            <li><a href="#watch">Guarda</a></li>
+            <li><a href="#buy">Acquista</a></li>
+            <li><a href="#contact">Contatta</a></li>
           </ul>
         </div>
       </nav>
@@ -104,17 +111,119 @@
     <!--Main Area-->
     <main>
       <!--Landing-->
-      <div id="landing">
+      <div id="landing" class="full-area">
+        <figure>
+          <img
+            src="assets/media/images/danielechitarrabeige.png"
+            alt="Daniele Bonaiuto mentre suona la chitarra e canta"
+          />
+        </figure>
         <h1 id="intro-title">Daniele Bonaiuto</h1>
+        <a class="cta-button" id="bar-to-spotify" href="http://spotify.com/" target="_blank">
+          <i class="fab fa-spotify"></i>
+          Ascolta su Spotify
+        </a>
       </div>
       <!--Listen Section-->
-      <section id="listen"></section>
+      <section id="listen" class="full-area">
+        <h2 class="hidden">Ascolta su Spotify Daniele Bonaiuto</h2>
+        <h3 class="section-title">Ultime uscite su Spotify</h3>
+        <div id="songs-grid">
+          <div id="box-1">
+            <figure>
+              <img
+                src="assets/media/images/placeholder-640-square.jpg"
+                alt="Placeholder"
+              />
+              <figcaption>Titolo</figcaption>
+            </figure>
+            <div>
+              <a
+                class="cta-button"
+                id="icon-to-spotify"
+                href="https://spotify.com"
+                target="_blank"
+              >
+                <i class="fab fa-spotify"></i>
+              </a>
+            </div>
+          </div>
+          <div id="box-2"><figure>
+            <img
+              src="assets/media/images/placeholder-640-square.jpg"
+              alt="Placeholder"
+            />
+            <figcaption>Titolo</figcaption>
+          </figure>
+          <div>
+            <a
+              class="cta-button"
+              id="icon-to-spotify"
+              href="https://spotify.com"
+              target="_blank"
+            >
+              <i class="fab fa-spotify"></i>
+            </a></div>
+          <div id="box-3"><figure>
+            <img
+              src="assets/media/images/placeholder-640-square.jpg"
+              alt="Placeholder"
+            />
+            <figcaption>Titolo</figcaption>
+          </figure>
+          <div>
+            <a
+              class="cta-button"
+              id="icon-to-spotify"
+              href="https://spotify.com"
+              target="_blank"
+            >
+              <i class="fab fa-spotify"></i>
+            </a>
+          </div>
+        </div>
+      </section>
       <!--Watch Section-->
-      <section id="watch"></section>
+      <section id="watch" class="full-area">
+        <h2 class="hidden">Guarda video di Daniele Bonaiuto</h2>
+        <video playsinline autoplay muted loop poster="" id="videoloop">
+          <source src="assets/media/video/placeholder.mp4" type="video/mp4">
+        </video>
+        <div id="watch-overlay">
+          <a class="cta-button" id="bar-to-youtube" href="http://youtube.com/" target="_blank">
+            <i class="fab fa-youtube"></i>
+            Play
+          </a>
+        </div>
+      </section>
       <!--Buy Section-->
-      <section id="buy"></section>
+      <section id="buy" class="full-area">
+        <h2 class="hidden">Acquista cd di Daniele Bonaiuto</h2>
+        <figure>
+          <img src="assets/media/images/vinyl.png" alt="Immagine di esempio di vinile per Daniele Bonaiuto">
+        </figure>
+        <div id="buy-area">
+          <p id="album-title"></p>
+          <p id="album-price"></p>
+          <a class="cta-button" id="icon-to-shopify" href="http://shopify.com/" target="_blank">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+        </div>
+      </section>
       <!--Contact Section-->
-      <section id="contact"></section>
+      <section id="contact" class="full-area">
+        <h2 class="hidden">Contatta Daniele Bonaiuto</h2>
+        <h3 class="section-title">Contatti</h3>
+        <div id="contact-section">
+          <ul>
+            <li><a href="mailto:faker@gmail.com" target="_blank">E-mail <i class="far fa-envelope"></i></a></li>
+            <li><a href="https://facebook.com" target="_blank">Facebook <i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://instagram.com" target="_blank">Instagram <i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://spotify.com" target="_blank">Spotify <i class="fab fa-spotify"></i></a></li>
+            <li><a href="https://youtube.com" target="_blank">Youtube <i class="fab fa-youtube"></i></a></li>
+          </ul>  
+        </div>
+      </section>
     </main>
     <!--Footer-->
     <footer></footer>

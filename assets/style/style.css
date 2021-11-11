@@ -8,19 +8,55 @@ body {
   font-size: 10px;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
 .hidden {
   position: absolute;
   top: -9999px;
   left: -9999px;
 }
 
+.full-area {
+  height: 100vh;
+}
+
+.cta-button {
+  background-color: #d6c8b9;
+  padding: 1.6rem 3.2rem;
+  font-size: 2rem;
+}
+
+/* Colour Palette */
+body {
+  color: whitesmoke;
+  background-color: #aea397;
+}
+
+.light-beige {
+  background-color: #d6c8b9;
+}
+
 /* Typography */
+
+body {
+  font-family: "Playfair Display";
+}
 
 p {
   font-size: 1.4rem;
 }
 
-/* Colour Palette */
+.section-title {
+  font-size: 2rem;
+  font-family: "Cinzel";
+}
 
 /* Header */
 
@@ -30,10 +66,49 @@ p {
 
 /* Listen section */
 
+.songs-grid {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 50px;
+}
+
 /* Watch section */
+
+#watch {
+  position: relative;
+}
+
+#videoloop {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+#watch-overlay {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #2a2929a5;
+  z-index: 10;
+}
 
 /* Buy section */
 
 /* Contact section */
 
 /* Footer */
+
+/* Media Query */
+
+@media screen and (min-width: 768px) {
+  .songs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
