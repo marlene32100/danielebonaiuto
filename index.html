@@ -95,10 +95,14 @@
     <![endif]-->
     <!--Header-->
     <header>
-      <button id="circle"></button>
       <nav>
-        <div>
-          <ul>
+        <div class="nav-closed">
+          <i class="fas fa-bars menu-icon nav-button"></i>
+          <i class="fas fa-times nav-button close-icon"></i>
+        </div>
+
+        <div id="nav-open" class="hidden">
+          <ul id="menu-list">
             <li><a href="#landing">Home</a></li>
             <li><a href="#listen">Ascolta</a></li>
             <li><a href="#watch">Guarda</a></li>
@@ -112,35 +116,44 @@
     <main>
       <!--Landing-->
       <div id="landing" class="full-area">
-        <figure>
+        <figure class="landing-image">
           <img
-            src="assets/media/images/danielechitarrabeige.png"
+            src="assets/media/images/landingimage.png"
             alt="Daniele Bonaiuto mentre suona la chitarra e canta"
+            style="width: 100%"
           />
         </figure>
         <h1 id="intro-title">Daniele Bonaiuto</h1>
-        <a class="cta-button" id="bar-to-spotify" href="http://spotify.com/" target="_blank">
-          <i class="fab fa-spotify"></i>
-          Ascolta su Spotify
+        <a
+          class="cta-button button-text"
+          id="bar-to-spotify"
+          href="http://spotify.com/"
+          target="_blank"
+        >
+          <i
+            class="fab fa-spotify"
+            style="text-shadow: none; vertical-align: middle"
+          ></i>
+          Ascolta
         </a>
       </div>
       <!--Listen Section-->
-      <section id="listen" class="full-area">
+      <section id="listen">
         <h2 class="hidden">Ascolta su Spotify Daniele Bonaiuto</h2>
         <h3 class="section-title">Ultime uscite su Spotify</h3>
         <div id="songs-grid">
-          <div id="box-1">
-            <figure>
+          <div class="box" id="box-1">
+            <figure class="box-image">
               <img
                 src="assets/media/images/placeholder-640-square.jpg"
                 alt="Placeholder"
+                style="width: 100%"
               />
-              <figcaption>Titolo</figcaption>
+              <figcaption class="box-title">Titolo</figcaption>
             </figure>
-            <div>
+            <div class="spotify-icon">
               <a
-                class="cta-button"
-                id="icon-to-spotify"
+                class="cta-button icon-to-spotify"
                 href="https://spotify.com"
                 target="_blank"
               >
@@ -148,38 +161,43 @@
               </a>
             </div>
           </div>
-          <div id="box-2"><figure>
-            <img
-              src="assets/media/images/placeholder-640-square.jpg"
-              alt="Placeholder"
-            />
-            <figcaption>Titolo</figcaption>
-          </figure>
-          <div>
-            <a
-              class="cta-button"
-              id="icon-to-spotify"
-              href="https://spotify.com"
-              target="_blank"
-            >
-              <i class="fab fa-spotify"></i>
-            </a></div>
-          <div id="box-3"><figure>
-            <img
-              src="assets/media/images/placeholder-640-square.jpg"
-              alt="Placeholder"
-            />
-            <figcaption>Titolo</figcaption>
-          </figure>
-          <div>
-            <a
-              class="cta-button"
-              id="icon-to-spotify"
-              href="https://spotify.com"
-              target="_blank"
-            >
-              <i class="fab fa-spotify"></i>
-            </a>
+          <div id="box-2" class="box">
+            <figure class="box-image">
+              <img
+                src="assets/media/images/placeholder-640-square.jpg"
+                alt="Placeholder"
+                style="width: 100%"
+              />
+              <figcaption class="box-title">Titolo</figcaption>
+            </figure>
+            <div class="spotify-icon">
+              <a
+                class="cta-button icon-to-spotify"
+                href="https://spotify.com"
+                target="_blank"
+              >
+                <i class="fab fa-spotify"></i>
+              </a>
+            </div>
+          </div>
+          <div id="box-3" class="box">
+            <figure>
+              <img
+                src="assets/media/images/placeholder-640-square.jpg"
+                alt="Placeholder"
+                style="width: 100%"
+              />
+              <figcaption class="box-title">Titolo</figcaption>
+            </figure>
+            <div class="spotify-icon">
+              <a
+                class="cta-button icon-to-spotify"
+                href="https://spotify.com"
+                target="_blank"
+              >
+                <i class="fab fa-spotify"></i>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -187,27 +205,51 @@
       <section id="watch" class="full-area">
         <h2 class="hidden">Guarda video di Daniele Bonaiuto</h2>
         <video playsinline autoplay muted loop poster="" id="videoloop">
-          <source src="assets/media/video/placeholder.mp4" type="video/mp4">
+          <source src="assets/media/video/placeholder.mp4" type="video/mp4" />
         </video>
         <div id="watch-overlay">
-          <a class="cta-button" id="bar-to-youtube" href="http://youtube.com/" target="_blank">
-            <i class="fab fa-youtube"></i>
-            Play
-          </a>
+          <div id="watch-button-area">
+            <a
+              class="cta-button"
+              id="watch-youtube"
+              id="bar-to-youtube"
+              href="http://youtube.com/"
+              target="_blank"
+            >
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
         </div>
       </section>
       <!--Buy Section-->
       <section id="buy" class="full-area">
         <h2 class="hidden">Acquista cd di Daniele Bonaiuto</h2>
-        <figure>
-          <img src="assets/media/images/vinyl.png" alt="Immagine di esempio di vinile per Daniele Bonaiuto">
+        <figure id="vinyl-image">
+          <img
+            src="assets/media/images/vinyl.png"
+            alt="Immagine di esempio di vinile per Daniele Bonaiuto"
+            style="width: 100%"
+          />
         </figure>
         <div id="buy-area">
-          <p id="album-title"></p>
-          <p id="album-price"></p>
-          <a class="cta-button" id="icon-to-shopify" href="http://shopify.com/" target="_blank">
-            <i class="fas fa-shopping-cart"></i>
-          </a>
+          <div id="buy-title-area">
+            <p id="album-title">Titolo</p>
+          </div>
+          <div id="price-area">
+            <p id="album-price"></p>
+            <a
+              class="cta-button"
+              id="icon-to-shopify"
+              href="http://shopify.com/"
+              target="_blank"
+            >
+              $10.99
+              <i
+                class="fas fa-shopping-cart"
+                style="vertical-align: middle"
+              ></i>
+            </a>
+          </div>
         </div>
       </section>
       <!--Contact Section-->
@@ -216,17 +258,44 @@
         <h3 class="section-title">Contatti</h3>
         <div id="contact-section">
           <ul>
-            <li><a href="mailto:faker@gmail.com" target="_blank">E-mail <i class="far fa-envelope"></i></a></li>
-            <li><a href="https://facebook.com" target="_blank">Facebook <i class="fab fa-facebook-f"></i></a></li>
-            <li><a href="https://instagram.com" target="_blank">Instagram <i class="fab fa-instagram"></i></a></li>
-            <li><a href="https://spotify.com" target="_blank">Spotify <i class="fab fa-spotify"></i></a></li>
-            <li><a href="https://youtube.com" target="_blank">Youtube <i class="fab fa-youtube"></i></a></li>
-          </ul>  
+            <li>
+              <a href="mailto:faker@gmail.com" target="_blank"
+                >E-mail <i class="far fa-envelope"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://facebook.com" target="_blank"
+                >Facebook <i class="fab fa-facebook-f"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://instagram.com" target="_blank"
+                >Instagram <i class="fab fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://spotify.com" target="_blank"
+                >Spotify <i class="fab fa-spotify"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://youtube.com" target="_blank"
+                >Youtube <i class="fab fa-youtube"></i
+              ></a>
+            </li>
+          </ul>
         </div>
       </section>
     </main>
     <!--Footer-->
-    <footer></footer>
+    <footer>
+      <small lang="en_EN"
+        >Designed and coded by
+        <a href="http://blueblissstudio.com" lang="it"
+          >Katia De Bon &#169;</a
+        ></small
+      >
+    </footer>
 
     <link rel="stylesheet" type="text/css" href="/" media="print" />
     <script src="" async defer></script>

@@ -2,6 +2,12 @@
 
 /* Basic style */
 
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 body {
   overflow-x: hidden;
   width: 100%;
@@ -27,10 +33,26 @@ ul {
   height: 100vh;
 }
 
+/* Buttons */
+
 .cta-button {
   background-color: #d6c8b9;
   padding: 1.6rem 3.2rem;
   font-size: 2rem;
+  border: 1px solid whitesmoke;
+  box-shadow: 7px 7px 14px #8f867c, -7px -7px 14px #cdc0b2;
+  text-align: center;
+  overflow: visible;
+}
+
+.button-text {
+  text-shadow: 7px 7px 14px #8f867c, -7px -7px 14px #cdc0b2;
+}
+
+.cta-button:hover {
+  background: linear-gradient(145deg, #9d9388, #baaea2);
+  box-shadow: 7px 7px 14px #8f867c, -7px -7px 14px #cdc0b2;
+  color: #001f3f;
 }
 
 /* Colour Palette */
@@ -49,6 +71,11 @@ body {
   font-family: "Playfair Display";
 }
 
+#intro-title {
+  font-size: 4rem;
+  font-family: "Cinzel";
+}
+
 p {
   font-size: 1.4rem;
 }
@@ -56,20 +83,145 @@ p {
 .section-title {
   font-size: 2rem;
   font-family: "Cinzel";
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.box-title {
+  font-size: 2rem;
+  text-align: center;
 }
 
 /* Header */
+header {
+  width: 100vw;
+  position: fixed;
+}
 
 /* Menu */
+nav {
+  z-index: 9999;
+  width: 40%;
+  height: 20%;
+}
+
+.nav-closed {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  width: 20%;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+.nav-closed i {
+  font-size: 2rem;
+  padding-right: 1rem;
+  color: white;
+  opacity: 0.7;
+  display: visible;
+  z-index: 9999;
+}
+
+.nav-closed i:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.close-icon {
+  display: none;
+  font-size: 3rem;
+  color: white;
+  opacity: 0.7;
+}
+
+.nav-open {
+  position: absolute;
+  width: 40%;
+  height: 80%;
+  top: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+}
 
 /* Landing */
 
+#landing {
+  position: relative;
+}
+
+.landing-image {
+  width: 100vw;
+  margin: 0;
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+}
+
+#intro-title {
+  position: absolute;
+  top: 10%;
+  text-align: right;
+  margin-right: 1rem;
+}
+
+#bar-to-spotify {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60vw;
+  padding: 1rem 2rem;
+}
+
 /* Listen section */
+
+#listen {
+  position: relative;
+}
 
 .songs-grid {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   row-gap: 50px;
+}
+
+.box {
+  background: #aea397;
+  box-shadow: 7px 7px 14px #8f867c, -7px -7px 14px #cdc0b2;
+  margin: 2rem;
+}
+
+.box-image {
+  border: 1px solid whitesmoke;
+}
+
+.spotify-icon {
+  padding: 0 1rem;
+  height: 8rem;
+  position: relative;
+}
+
+.icon-to-spotify {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 2rem;
+  width: 2rem;
+  padding: 1.2rem;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #baaea2, #9d9388);
+  box-shadow: 7px 7px 14px #8f867c, -7px -7px 14px #cdc0b2;
+}
+
+.icon-to-spotify i {
+  font-size: 2rem;
 }
 
 /* Watch section */
@@ -98,11 +250,100 @@ p {
   z-index: 10;
 }
 
+#watch-button-area {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+#watch-youtube {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  height: 2rem;
+  width: 2rem;
+  padding: 1.2rem;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #baaea2, #9d9388);
+  box-shadow: 7px 7px 14px #8f867c, -7px -7px 14px #cdc0b2;
+}
+
 /* Buy section */
+
+#buy {
+  position: relative;
+}
+
+#vinyl-image {
+  height: 50vh;
+  width: 80%;
+  margin-top: 8rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#buy-area {
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  width: 100vw;
+  text-align: center;
+  z-index: 10;
+  height: auto;
+}
+
+#album-title,
+#icon-to-shopify {
+  display: inline-block;
+}
+
+#album-title {
+  font-size: 2rem;
+}
+
+#icon-to-shopify {
+  width: 40vw;
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+}
 
 /* Contact section */
 
+#contact {
+  position: relative;
+}
+
+#contact-section {
+  text-align: center;
+  font-size: 1.4rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#contact-section li {
+  padding: 1rem;
+  text-shadow: 7px 7px 14px #625c55, -7px -7px 14px #cdc0b2;
+  border-bottom: 1px solid #d6c8b9;
+}
+
+#contact-section li i {
+  font-size: 2rem;
+  text-shadow: none;
+  vertical-align: middle;
+}
+
 /* Footer */
+
+#footer {
+  position: relative;
+}
+
+small {
+  font-size: 0.8rem;
+  font-style: italic;
+}
 
 /* Media Query */
 
