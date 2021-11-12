@@ -460,8 +460,34 @@ small {
 /* Media Query */
 
 @media screen and (min-width: 768px) {
+  .landing-image {
+    left: 0;
+    bottom: 0;
+    width: 35vw;
+  }
+  #intro-title {
+    right: 1rem;
+    top: 30%;
+    width: 60vw;
+    font-size: 8rem;
+    text-transform: uppercase;
+  }
+  #bar-to-spotify {
+    position: absolute;
+    right: 3rem;
+    left: auto;
+    transform: none;
+    bottom: 10%;
+    width: 30vw;
+  }
   .songs-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 998) {
+  .landing-image {
+    width: 42vw;
   }
 }
