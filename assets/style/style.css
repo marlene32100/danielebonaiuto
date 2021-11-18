@@ -22,6 +22,21 @@ a {
   color: inherit;
 }
 
+a:hover {
+  background: linear-gradient(145deg, #9d9388, #baaea2);
+  box-shadow: 7px 7px 14px #8f867c, -7px -7px 14px #cdc0b2;
+  color: #001f3f;
+}
+
+figure {
+  margin: auto;
+}
+
+figure img {
+  height: 100%;
+  object-fit: contain;
+}
+
 ul {
   list-style-type: none;
 }
@@ -197,6 +212,7 @@ p {
   font-family: "Cinzel";
   margin-top: 4rem;
   text-align: center;
+  padding: 3rem 0;
 }
 
 .box-title {
@@ -280,6 +296,7 @@ nav {
   top: 10%;
   text-align: right;
   margin-right: 1rem;
+  text-shadow: 2px 2px 6px #001f3fb3;
 }
 
 #bar-to-spotify {
@@ -297,10 +314,11 @@ nav {
   position: relative;
 }
 
-.songs-grid {
+#songs-grid {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   row-gap: 50px;
+  padding-bottom: 3rem;
 }
 
 .box {
@@ -380,6 +398,12 @@ nav {
   box-shadow: 7px 7px 14px #8f867c, -7px -7px 14px #cdc0b2;
 }
 
+#watch-youtube:hover {
+  background: linear-gradient(145deg, #9d9388, #baaea2);
+  box-shadow: 7px 7px 14px #8f867c, -7px -7px 14px #cdc0b2;
+  color: #001f3f;
+}
+
 /* Buy section */
 
 #buy {
@@ -419,6 +443,10 @@ nav {
   padding: 1rem 2rem;
 }
 
+#price-area {
+  padding: 2rem;
+}
+
 /* Contact section */
 
 #contact {
@@ -436,6 +464,7 @@ nav {
 
 #contact-section li {
   padding: 1rem;
+  line-height: 2rem;
   text-shadow: 7px 7px 14px #625c55, -7px -7px 14px #cdc0b2;
   border-bottom: 1px solid #d6c8b9;
 }
@@ -446,10 +475,18 @@ nav {
   vertical-align: middle;
 }
 
+#contact-section li a:hover {
+  background: #aea397;
+  box-shadow: none;
+  color: #001f3f;
+}
+
 /* Footer */
 
-#footer {
+footer {
   position: relative;
+  height: 10vh;
+  text-align: center;
 }
 
 small {
@@ -486,8 +523,135 @@ small {
   }
 }
 
-@media screen and (min-width: 998) {
+@media screen and (min-width: 768px) {
   .landing-image {
-    width: 42vw;
+    height: 100%;
+    width: auto;
+    overflow: hidden;
+  }
+
+  #intro-title {
+    width: auto;
+  }
+
+  #bar-to-spotify {
+    width: 80%;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  #listen {
+    height: auto;
+    position: relative;
+  }
+
+  #songs-grid {
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .box {
+    border-bottom: 1px solid whitesmoke;
+  }
+
+  .box-image {
+    border: none;
+  }
+
+  #watch-youtube {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  #watch-youtube i {
+    font-size: 3rem;
+    vertical-align: middle;
+    padding-top: 0.5rem;
+  }
+
+  #vinyl-image {
+    height: 60vh;
+  }
+
+  .contact-list-item {
+    font-size: 1.6rem;
+  }
+
+  .contact-list-item i {
+    vertical-align: middle;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+  }
+}
+
+@media screen and (min-width: 998px) {
+  .landing-image {
+    width: 42%;
+  }
+
+  .section-title {
+    font-size: 3rem;
+  }
+
+  #intro-title {
+    width: auto;
+    font-size: 10rem;
+  }
+
+  #bar-to-spotify {
+    width: 50%;
+    right: 1rem;
+    bottom: 1rem;
+    left: auto;
+    transform: none;
+  }
+
+  #listen {
+    height: auto;
+  }
+
+  #vinyl-image {
+    margin-top: 3rem;
+    position: absolute;
+    left: 20rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40vw;
+    height: 80vh;
+    overflow: hidden;
+    z-index: 20;
+  }
+
+  #buy-area {
+    right: 5rem;
+    left: auto;
+    top: auto;
+    bottom: 5rem;
+    text-align: center;
+    width: 50vw;
+    height: fit-content;
+    z-index: 30;
+  }
+
+  #album-title {
+    font-size: 3rem;
+  }
+
+  #price-area {
+    width: 50rem;
+    margin: auto;
+  }
+
+  #icon-to-shopify {
+    padding: 1.6rem 3.2rem;
+    width: 30rem;
+    font-size: 1.6rem;
   }
 }
