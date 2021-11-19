@@ -227,6 +227,7 @@ p {
   margin-top: 4rem;
   text-align: center;
   padding: 3rem 0;
+  text-shadow: 2px 2px 6px #292623;
 }
 
 .box-title {
@@ -329,7 +330,7 @@ nav {
   top: 10%;
   text-align: right;
   margin-right: 1rem;
-  text-shadow: 2px 2px 6px #001f3fb3;
+  text-shadow: 2px 2px 6px #292623;
   z-index: 10;
 }
 
