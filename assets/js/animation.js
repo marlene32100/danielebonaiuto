@@ -35,9 +35,9 @@ let secondTl = gsap.timeline({
 });
 
 secondTl.fromTo(
-  ".section-title",
+  ".listen-title",
   { opacity: 0, scale: 0 },
-  { opacity: 1, scale: 1, duration: 2 }
+  { opacity: 1, scale: 1 }
 );
 
 for (i = 0; i < boxes.length; i++) {
@@ -106,12 +106,12 @@ let sexthTl = gsap.timeline({
 
 sexthTl
   .fromTo(
-    ".section-title",
+    ".contact-title",
     { autoAlpha: 0, y: -200, scale: 0 },
-    { autoAlpha: 1, y: 0, duration: 2, scale: 1.5 }
+    { autoAlpha: 1, y: 0, duration: 2, scale: 1 }
   )
   .fromTo(
     "#contact-section",
-    { autoAlpha: 0, x: -200, scale: 0 },
-    { autoAlpha: 1, x: 0, duration: 2, scale: 1 }
+    { autoAlpha: 0, scale: 0 },
+    { autoAlpha: 1, scale: 1, duration: 2 }
   );
