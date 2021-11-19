@@ -115,7 +115,18 @@
     <!--Main Area-->
     <main>
       <!--Landing-->
-      <div id="landing" class="full-area">
+      <div id="landing">
+        <div class="intro-title">
+          <h1 id="intro-title">Daniele Bonaiuto</h1>
+        </div>
+        <img
+          class="guitar-svg"
+          src="./assets/media/images/note.svg"
+          alt="Guitar
+        svg image"
+          style="height: 100px"
+        />
+        <div class="blend"></div>
         <figure class="landing-image">
           <img
             src="assets/media/images/landingimage.png"
@@ -123,19 +134,20 @@
             style="width: 100%"
           />
         </figure>
-        <h1 id="intro-title">Daniele Bonaiuto</h1>
-        <a
-          class="cta-button button-text"
-          id="bar-to-spotify"
-          href="http://spotify.com/"
-          target="_blank"
-        >
-          <i
-            class="fab fa-spotify"
-            style="text-shadow: none; vertical-align: middle"
-          ></i>
-          Ascolta
-        </a>
+        <div class="listen-cta">
+          <a
+            class="cta-button button-text"
+            id="bar-to-spotify"
+            href="http://spotify.com/"
+            target="_blank"
+          >
+            <i
+              class="fab fa-spotify"
+              style="text-shadow: none; vertical-align: middle"
+            ></i>
+            Ascolta
+          </a>
+        </div>
       </div>
       <!--Listen Section-->
       <section id="listen">
@@ -299,6 +311,19 @@
 
     <link rel="stylesheet" type="text/css" href="/" media="print" />
 
-    <script src="assets/js/resize.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"
+      integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"
+      integrity="sha512-CPA5LMoJI/a5HkSIAKcBtFXe4gqGjPUL2ExF/3PmhrrHI17wod9xOqqF+0WZQRKIIq0KwF8oG5BaiWobtrke3A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./assets/js/resize.js"></script>
+    <script src="./assets/js/animation.js"></script>
   </body>
 </html>
