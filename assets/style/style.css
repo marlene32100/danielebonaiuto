@@ -160,6 +160,43 @@ ul {
   font-display: swap;
 }
 
+/* Keyframes */
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.rotating {
+  -webkit-animation: rotating 2s linear infinite;
+  -moz-animation: rotating 2s linear infinite;
+  -ms-animation: rotating 2s linear infinite;
+  -o-animation: rotating 2s linear infinite;
+  animation: rotating 2s linear infinite;
+}
+
 /* Buttons */
 
 .cta-button {
@@ -283,7 +320,6 @@ nav {
   position: relative;
   width: 100%;
   height: 100vh;
-  clip-path: circle(8%);
 }
 
 .landing-image {
@@ -311,22 +347,6 @@ nav {
   width: 60vw;
   padding: 1rem 2rem;
   z-index: 10;
-}
-
-.guitar-svg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-}
-
-.blend {
-  height: 100vh;
-  width: 100%;
-  position: absolute;
-  opacity: 0.5;
-  background-color: #aea397;
 }
 
 /* Listen section */
@@ -437,6 +457,7 @@ nav {
   margin-top: 8rem;
   margin-left: auto;
   margin-right: auto;
+  overflow: hidden;
 }
 
 #buy-area {
