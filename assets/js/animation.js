@@ -93,7 +93,7 @@ let fiftTl = gsap.timeline({
 fiftTl.fromTo(
   "#buy-area",
   { autoAlpha: 0, y: -200, scale: 0 },
-  { autoAlpha: 1, y: 0, duration: 2, scale: 1.5 }
+  { autoAlpha: 1, y: 0, duration: 2, scale: 1 }
 );
 
 let sexthTl = gsap.timeline({
