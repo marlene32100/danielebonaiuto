@@ -81,6 +81,16 @@ fourthTl.fromTo(
   { opacity: 1, scale: 1 }
 );
 
+const vinylSpinning = tl.fromTo(
+  ".rotating",
+  { rotation: 0 },
+  { rotation: 360, transformOrigin: "50% 50%", repeat: -1, ease: "none" }
+);
+
+window.addEventListener("load", () => {
+  vinylSpinning.play();
+});
+
 let fiftTl = gsap.timeline({
   scrollTrigger: {
     trigger: ".rotating",
