@@ -15,7 +15,7 @@ tl.fromTo(
   { clipPath: "circle(75%)", duration: 2 }
 );
 
-tl.fromTo(".guitar-svg", { scale: 1 }, { scale: 0, opacity: 0 }, "-=1.5");
+tl.fromTo(".guitar-svg", { scale: 0.7 }, { scale: 0, opacity: 0 }, "-=1.5");
 
 tl.fromTo(
   ".pin-spacer",
