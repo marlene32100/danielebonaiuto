@@ -2,6 +2,7 @@ const boxes = document.getElementsByClassName("box");
 
 const tl = gsap.timeline({
   pause: true,
+  reversed: true,
 });
 
 const homeAnimated = tl
@@ -18,7 +19,11 @@ const homeAnimated = tl
   .fromTo(
     "#bar-to-spotify",
     { opacity: 0, y: -100 },
-    { opacity: 1, y: 0, duration: 2 }
+    {
+      opacity: 1,
+      y: 0,
+      duration: 2,
+    }
   );
 
 window.addEventListener("load", () => {
@@ -32,6 +37,8 @@ let secondTl = gsap.timeline({
     end: "30%",
     scrub: "true",
   },
+  pause: true,
+  reversed: true,
 });
 
 secondTl.fromTo(

@@ -63,6 +63,7 @@ ul {
 }
 
 /* Custom Font Family */
+
 @font-face {
   font-family: "Cinzel Black";
   src: url("fonts/cinzel/Cinzel-Black.woff2") format("woff2"),
@@ -228,7 +229,7 @@ p {
   margin-top: 4rem;
   text-align: center;
   padding: 3rem 0;
-  text-shadow: 2px 2px 6px #292623;
+  text-shadow: 7px 7px 14px #8f867c, -7px -7px 14px #cdc0b2;
 }
 
 .box-title {
@@ -331,7 +332,7 @@ nav {
   top: 10%;
   text-align: right;
   margin-right: 1rem;
-  text-shadow: 2px 2px 6px #292623;
+  text-shadow: 7px 7px 14px #8f867c, -7px -7px 14px #cdc0b2;
   z-index: 10;
 }
 
@@ -615,7 +616,8 @@ small {
   }
 
   #listen {
-    height: auto;
+    height: 100vh;
+    height: var(--app-height);
     position: relative;
   }
 
