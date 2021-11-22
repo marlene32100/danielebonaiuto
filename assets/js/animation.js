@@ -34,7 +34,7 @@ let secondTl = gsap.timeline({
   scrollTrigger: {
     trigger: "#listen",
     start: "-30%",
-    end: "30%",
+    end: "0%",
     scrub: "true",
   },
   pause: true,
@@ -56,40 +56,6 @@ for (i = 0; i < boxes.length; i++) {
   );
 }
 
-/* Youtube video animation - hidden
-let thirdTl = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#watch",
-    start: "-50%",
-    end: "0%",
-    scrub: "true",
-    pin: true,
-  },
-});
-
-thirdTl.fromTo(
-  "#videoloop",
-  { scale: 2, height: 0 },
-  { scale: 1, height: "100%" }
-);
-
-let fourthTl = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#buy",
-    start: "100px",
-    end: "100%",
-    scrub: "true",
-  },
-});
-
-fourthTl.fromTo(
-  "#watch-button-area",
-  { opacity: 0, scale: 0 },
-  { opacity: 1, scale: 1 }
-);
-
-
-*/
 const vinylSpinning = tl.fromTo(
   ".rotating",
   { rotation: 0 },
