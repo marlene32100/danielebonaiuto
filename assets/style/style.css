@@ -215,6 +215,7 @@ body {
 #intro-title {
   font-size: 4rem;
   font-family: "Cinzel";
+  margin: 0;
 }
 
 p {
@@ -506,13 +507,17 @@ nav {
 
 #contact-section {
   text-align: center;
-  font-size: 1.4rem;
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+#contact-section-list {
+  margin-top: 8rem;
+  font-size: 1.2rem;
 }
 
 #contact-section li {
@@ -546,6 +551,7 @@ footer {
 small {
   font-size: 0.8rem;
   font-style: italic;
+  color: #001f3f;
 }
 
 /* Media Query */
@@ -578,6 +584,9 @@ small {
     display: grid;
     -ms-grid-columns: (1fr) [3];
     grid-template-columns: repeat(3, 1fr);
+  }
+  #contact-section {
+    font-size: 1.4rem;
   }
 }
 

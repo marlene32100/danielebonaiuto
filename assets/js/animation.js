@@ -49,6 +49,7 @@ for (i = 0; i < boxes.length; i++) {
   );
 }
 
+/* Youtube video animation - hidden
 let thirdTl = gsap.timeline({
   scrollTrigger: {
     trigger: "#watch",
@@ -68,10 +69,9 @@ thirdTl.fromTo(
 let fourthTl = gsap.timeline({
   scrollTrigger: {
     trigger: "#buy",
-    start: "-130%",
-    end: "-100%",
+    start: "100px",
+    end: "100%",
     scrub: "true",
-    pin: true,
   },
 });
 
@@ -81,6 +81,8 @@ fourthTl.fromTo(
   { opacity: 1, scale: 1 }
 );
 
+
+*/
 const vinylSpinning = tl.fromTo(
   ".rotating",
   { rotation: 0 },
@@ -91,16 +93,16 @@ window.addEventListener("load", () => {
   vinylSpinning.play();
 });
 
-let fiftTl = gsap.timeline({
+let fifthTl = gsap.timeline({
   scrollTrigger: {
     trigger: ".rotating",
-    start: "10%",
-    end: "50%",
+    start: "-30%",
+    end: "10%",
     scrub: "true",
   },
 });
 
-fiftTl.fromTo(
+fifthTl.fromTo(
   "#buy-area",
   { autoAlpha: 0, y: -200, scale: 0 },
   { autoAlpha: 1, y: 0, duration: 2, scale: 1 }
