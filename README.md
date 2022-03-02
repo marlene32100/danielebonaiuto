@@ -1,3 +1,3 @@
 # Daniele Bonaiuto portfolio
 
-Live preview on [Github Pages](https://marlene32100.github.io/danielebonaiuto/)
+Live preview on [Daniele Bonaiuto website](https://danielebonaiuto.it)
