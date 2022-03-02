@@ -402,6 +402,12 @@ nav {
   font-size: 2rem;
 }
 
+.link-to-lyrics {
+  height: 10rem;
+  text-align: center;
+  overflow: visible;
+}
+
 /* Watch section */
 
 #watch {
