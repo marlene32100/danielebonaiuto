@@ -68,11 +68,13 @@ window.addEventListener("load", () => {
 
 let fifthTl = gsap.timeline({
   scrollTrigger: {
-    trigger: ".rotating",
+    trigger: "#buy",
     start: "-30%",
-    end: "10%",
+    end: "0%",
     scrub: "true",
-  },
+  },,
+  pause: true,
+  reversed: true,
 });
 
 fifthTl.fromTo(
@@ -84,9 +86,11 @@ fifthTl.fromTo(
 let sexthTl = gsap.timeline({
   scrollTrigger: {
     trigger: "#buy",
-    start: "70%",
+    start: "30%",
     scrub: "true",
-  },
+  },,
+  pause: true,
+  reversed: true,
 });
 
 sexthTl

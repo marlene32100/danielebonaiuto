@@ -43,8 +43,8 @@ figure {
 
 figure img {
   height: 100%;
-  -o-object-fit: contain;
-  object-fit: contain;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 ul {
@@ -214,9 +214,10 @@ body {
 }
 
 #intro-title {
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: "Cinzel";
   margin: 0;
+  overflow: visible;
 }
 
 p {
@@ -323,7 +324,7 @@ nav {
   width: 100vw;
   margin: 0;
   position: absolute;
-  bottom: 5%;
+  bottom: 15%;
   left: 0;
 }
 
@@ -428,10 +429,11 @@ nav {
   z-index: 10;
 }
 
-#watch-button-area {
-  position: relative;
-  height: 100%;
-  width: 100%;
+.overlay-text-youtube {
+  position: absolute;
+  bottom: 20%;
+  right: 10%;
+  font-family: 3rem;
 }
 
 #watch-youtube {
@@ -448,6 +450,14 @@ nav {
   box-shadow: 7px 7px 14px #8f867c, -7px -7px 14px #cdc0b2;
 }
 
+#watch-youtube::before {
+  content: "Guarda su Youtube";
+  font-size: 1.6rem;
+  position: absolute;
+  bottom: 6rem;
+  left: -0.8rem;
+}
+
 #watch-youtube:hover {
   background: -o-linear-gradient(305deg, #9d9388, #baaea2);
   background: linear-gradient(145deg, #9d9388, #baaea2);
@@ -460,6 +470,10 @@ nav {
 
 #buy {
   position: relative;
+}
+
+.rotating {
+  object-fit: contain;
 }
 
 #vinyl-image {
@@ -491,7 +505,6 @@ nav {
 }
 
 #icon-to-shopify {
-  width: 40vw;
   font-size: 1.6rem;
   padding: 1rem 2rem;
 }
@@ -545,17 +558,29 @@ nav {
 
 footer {
   position: relative;
-  height: 10vh;
+  height: 10rem;
   text-align: center;
+  background-color: #625c55;
+  color: #d6c8b9;
 }
 
 small {
   font-size: 0.8rem;
   font-style: italic;
-  color: #001f3f;
+  color: #d6c8b9;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* Media Query */
+
+@media screen and (min-width: 360px) {
+  #intro-title {
+    font-size: 4rem;
+  }
+}
 
 @media screen and (min-width: 768px) {
   .landing-image {
@@ -620,10 +645,6 @@ small {
     position: relative;
   }
 
-  .box {
-    border-bottom: 1px solid whitesmoke;
-  }
-
   .box-image {
     border: none;
   }
@@ -678,9 +699,6 @@ small {
     transform: none;
   }
 
-  #listen {
-  }
-
   #songs-grid {
     width: 100%;
     display: -ms-grid;
@@ -706,10 +724,18 @@ small {
     -ms-grid-column: 3;
   }
 
+  #watch-youtube::before {
+    content: "Guarda su Youtube";
+    font-size: 1.6rem;
+    position: absolute;
+    bottom: 8rem;
+    left: -0.8rem;
+  }
+
   #vinyl-image {
     margin-top: 3rem;
     position: absolute;
-    left: 20rem;
+    left: 3rem;
     top: 50%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
@@ -721,10 +747,10 @@ small {
   }
 
   #buy-area {
-    right: 5rem;
+    right: 1rem;
     left: auto;
-    top: auto;
-    bottom: 5rem;
+    top: 60%;
+    transform: translateY(-50%);
     text-align: center;
     width: 50vw;
     height: -webkit-fit-content;
@@ -738,13 +764,12 @@ small {
   }
 
   #price-area {
-    width: 50rem;
+    text-align: center;
     margin: auto;
   }
 
   #icon-to-shopify {
     padding: 1.6rem 3.2rem;
-    width: 30rem;
     font-size: 1.6rem;
   }
 }
