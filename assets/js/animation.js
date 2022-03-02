@@ -72,7 +72,7 @@ let fifthTl = gsap.timeline({
     start: "-30%",
     end: "0%",
     scrub: "true",
-  },,
+  },
   pause: true,
   reversed: true,
 });
