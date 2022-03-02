@@ -88,7 +88,7 @@ let sexthTl = gsap.timeline({
     trigger: "#buy",
     start: "30%",
     scrub: "true",
-  },,
+  },
   pause: true,
   reversed: true,
 });
