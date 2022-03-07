@@ -755,7 +755,7 @@ small {
   #buy-area {
     right: 1rem;
     left: auto;
-    top: 60%;
+    top: 40%;
     transform: translateY(-50%);
     text-align: center;
     width: 50vw;
