@@ -560,6 +560,32 @@ nav {
   color: #001f3f;
 }
 
+/* Ringraziamenti */
+
+#ringraziamenti {
+  overflow: hidden;
+}
+.ringraziamenti-container {
+  background-color: #625c55;
+  width: 80%;
+  height: 60%;
+  margin: auto;
+  position: relative;
+}
+
+.ringraziamenti-testo {
+  padding: 1rem;
+  font-style: italic;
+}
+
+.signature {
+  float: right;
+}
+
+.signature:before {
+  content: "-";
+}
+
 /* Footer */
 
 footer {
